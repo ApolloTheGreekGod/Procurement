@@ -1,25 +1,107 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+        </style>
+    <style>
+        /* Additional styles for better presentation */
+        body {
 
-        <title>Notifications</title>
-    </head>
-    <body>
-        <div class="sidebar">
-            <a  href="purchaserequest.html">Purchase Request</a>
-            <a href="purchaseorder.html">Purchase Order</a>
-            <a href="quotation.html">Quotation</a>
-            <a  href="payment.html">Payment</a>
-            <a href="delivery.html">Delivery Progress</a>
-            <a  href="report.html">Report</a>
-            <a class="active" href="notificationshade.html">Notifications</a>
-            <a href="login.html">Logout</a>
-            <p class="sidebartext">Admin</p>
-            <img src="profilepic1.jpg" width="45%" id="imgsidebar">
+            margin: 0;
+            padding: 0;
+   
+        }
+
+        .content {
+            margin-left: 260px; /* Adjusted margin to accommodate the sidebar */
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .notifBox {
+            margin-top: 20px; /* Increased margin for better separation */
+            margin-left: 10vw;
+            margin-right: 5vw;
+            background-color: #fff; /* White background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 15px 15px 11px #ffcb7c;
+        }
+
+        .notifBox h2 {
+            color: #007bff; /* Blue header color */
+            margin-bottom: 10px;
+        }
+
+        .notifBox p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .notifBox hr {
+            margin-top: 10px; /* Adjusted margin for better spacing */
+            border: 0.5px solid #ccc;
+        }
+    </style>
+    <title>Notifications</title>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="purchaserequest.html">Purchase Request</a>
+        <a href="purchaseorder.html">Purchase Order</a>
+        <a href="quotation.html">Quotation</a>
+        <a href="payment.html">Payment</a>
+        <a href="delivery.html">Delivery Progress</a>
+        <a href="report.html">Report</a>
+        <a class="active" href="notificationshade.html">Notifications</a>
+        <a href="index.html">Logout</a>
+        <p class="sidebartext">Admin</p>
+        <img src="profilepic1.jpg" width="45%" id="imgsidebar">
+    </div>
+    <div class="content">
+        <center><h1>Notifications</h1></center>
+        <div class="notifBox">
+            <h2>New Purchase Request</h2>
+            <hr>
+            <p>New purchase request with ID PR-250723-0001 and a request date of 25/7/2023 that is requesting product ID PROD-FR0012.</p>
         </div>
-        <div class="content">
-            <center><h1>Report</h1></center>
+
+        <!-- Additional Notifications -->
+        <div class="notifBox">
+            <h2>Purchase Request has been approved</h2>
+            <hr>
+            <p>Purchase request with ID PR-250723-0001 has been approved. </p>
+        </div>
+
+        <div class="notifBox">
+            <h2>Quotation Selected</h2>
+            <hr>
+            <p>Your purchase request with ID PR-250723-0001 has selected a quotation.</p>
         </div>
         
-    </body>
+        <div class="notifBox">
+    <h2>Purchase Order created and sent</h2>
+    <hr>
+    <p>The purchase request with ID PR-250723-0001 has made a purchase order. Order ID: PO-020823-0001.</p>
+</div>
+
+
+
+
+        <!-- You can add more notifications as needed -->
+
+    </div>
+<footer>
+    <p>&copy; 2023 KrustyKrabs. All rights reserved.</p>
+</footer>
+</body>
 </html>

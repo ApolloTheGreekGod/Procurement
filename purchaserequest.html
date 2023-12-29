@@ -1,7 +1,9 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+        </style>
         <title>Purchase Request</title>
     </head>
     <body>
@@ -13,7 +15,7 @@
             <a href="delivery.html">Delivery Progress</a>
             <a href="report.html">Report</a>
             <a href="notificationshade.html">Notifications</a>
-            <a href="login.html">Logout</a>
+            <a href="index.html">Logout</a>
             <p class="sidebartext">Admin</p>
             <img src="profilepic1.jpg" width="45%" id="imgsidebar">
         </div>
@@ -22,6 +24,7 @@
             <div class="submitButtonPR" >
                 <a style="text-decoration: none; color: white;" href="newpurchaserequest.html"> Submit New Purchase Request </a>
             </div>
+                
             <div class="PRTableContainer">
                 <table>
                     <tr>
@@ -93,7 +96,7 @@
                 }
                 else {
                     document.getElementById("PRTable2").style.display = "block";
-                    document.getElementById("viewButton").innerHTML = "Unview";
+                    document.getElementById("viewButton").innerHTML = "Hide";
                 if (aprvStatus == "Approved") {
                     document.getElementById("PRApprButtonID").style.display = "none";
                 }
@@ -117,7 +120,7 @@
                 }
                 else {
                     document.getElementById("PRTable3").style.display = "block";
-                    document.getElementById("viewButton2").innerHTML = "Unview";
+                    document.getElementById("viewButton2").innerHTML = "Hide";
                 if (aprvStatus == "Approved") {
                     document.getElementById("PRApprButtonID2").style.display = "none";
                 }
@@ -131,5 +134,9 @@
                 document.getElementById("viewButton2").innerHTML = "View";
             }
         </script>
+<footer>
+    <p>&copy; 2023 KrustyKrabs. All rights reserved.</p>
+</footer>
     </body>
+
 </html>

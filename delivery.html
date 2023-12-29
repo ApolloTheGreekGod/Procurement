@@ -2,7 +2,9 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="style2.css">
-
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+        </style>
         <title>Delivery Progress</title>
     </head>
     <body>
@@ -14,7 +16,7 @@
             <a class="active" href="delivery.html">Delivery Progress</a>
             <a href="report.html">Report</a>
             <a href="notificationshade.html">Notifications</a>
-            <a href="login.html">Logout</a>
+            <a href="index.html">Logout</a>
             <p class="sidebartext">Admin</p>
             <img src="profilepic1.jpg" width="45%" id="imgsidebar">
         </div>
@@ -43,7 +45,7 @@
                             <textarea id="deliveryCond1" class="deliveryCond"></textarea>
                         </td>
                         <td id="dateRc">
-                            N/A
+                           <input type="date">
                         </td>
                     </tr>
                     <tr>
@@ -60,7 +62,7 @@
                             <textarea id="deliveryCond2" class="deliveryCond"></textarea>
                         </td>
                         <td id="dateRc2">
-                            N/A
+                           <input type="date">
                         </td>
                     </tr>
                 </table>
@@ -74,20 +76,20 @@
             if (output != "pending") {
 document.getElementById("staffIDDel").innerHTML = "Admin";
             } 
-            if ( output == "arrived") {
+           /* if ( output == "arrived") {
                 document.getElementById("dateRc").innerHTML = today;
                 console.log("works");
-            }
+            }*/
             //------------------------------------------------------
             selectElement2 = document.querySelector('#delStatus2');
             output2 = selectElement2.options[selectElement2.selectedIndex].value;
             if (output2 != "pending") {
 document.getElementById("staffIDDel2").innerHTML = "Admin";
             } 
-            if ( output2 == "arrived") {
+          /*  if ( output2 == "arrived") {
                 document.getElementById("dateRc2").innerHTML = today;
                 console.log("works");
-            }
+            }*/
             alert("Delivery Progress has been updated!");
                 }
           
@@ -113,5 +115,9 @@ if (mm < 10) {
 }
 today = dd + '/' + mm + '/' + yyyy;
         </script>
+      
+<footer>
+    <p>&copy; 2023 KrustyKrabs. All rights reserved.</p>
+</footer>
     </body>
 </html>

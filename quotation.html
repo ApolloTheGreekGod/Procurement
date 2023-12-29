@@ -1,7 +1,9 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+        </style>
         <title>Quotation</title>
     </head>
     <body>
@@ -13,7 +15,7 @@
             <a href="delivery.html">Delivery Progress</a>
             <a href="report.html">Report</a>
             <a href="notificationshade.html">Notifications</a>
-            <a href="login.html">Logout</a>
+            <a href="index.html">Logout</a>
             <p class="sidebartext">Admin</p>
             <img src="profilepic1.jpg" width="45%" id="imgsidebar">
         </div>
@@ -24,14 +26,17 @@
                 <table>
                     <tr>
                         <th>Request ID</th>
+                      <th>Select Status</th>
                     </tr>
                     <tr id="PR-250723-0001">
                         <td>PR-250723-0001</td>
+                      <td id="submitStatQ">Pending</td>
                         <td style="border: none;"><button class="quotationButton"  onclick="qList()" >Generate and send RFQ</button></td>
                         <td style="border: none;"><button class="quotationButton2" id="quotationButton2" onclick="qListTable()">Quotation List</button></td>
                     </tr>
                     <tr id="PR-250723-0002">
                         <td>PR-250723-0002</td>
+                      <td id="submitStatQ2">Pending</td>
                         <td style="border: none;" ><button class="quotationButton"  onclick="qList2()">Generate and send RFQ</button></td>
                         <td style="border: none;"><button class="quotationButton2" id="quotationButton3" onclick="qListTable2()">Quotation List</button></td>
                     </tr>
@@ -39,7 +44,7 @@
             </div>
              <!-- ====================================== 1st Q Table ================================================-->
             <div class="quotationSelectionTable" id="quotationSelectionTable">
-                <h3>Purchase Request ID: PR-250723-0001, Product ID: PROD-FR0012</h2>
+                <h3>Purchase Request ID: PR-250723-0001, Product ID: PROD-FR0012</h3>
                 <table>
                     <tr>
                         <th>Quotation ID</th>
@@ -66,7 +71,7 @@
             </div>
          <!-- ====================================== 2nd Q Table ================================================-->
          <div class="quotationSelectionTable" id="quotationSelectionTable2">
-            <h3>Purchase Request ID: PR-250723-0055, Product ID: PROD-FS0023</h2>
+            <h3>Purchase Request ID: PR-250723-0055, Product ID: PROD-FS0023</h3>
             <table>
                 <tr>
                     <th>Quotation ID</th>
@@ -104,7 +109,8 @@
                 if (document.getElementById("selectQuote1").checked == true || document.getElementById("selectQuote2").checked == true)
                 {
                     console.log("hooray");
-                    document.getElementById("PR-250723-0001").style.display = "none";
+              //    document.getElementById("PR-250723-0001").style.display = "none";
+                  document.getElementById("submitStatQ").innerHTML = "Selected";
                 document.getElementById("quotationSelectionTable").style.display = "none";
                 }
                 else {
@@ -124,7 +130,8 @@
                 if (document.getElementById("selectQuote11").checked == true || document.getElementById("selectQuote12").checked == true)
                 {
                     console.log("hooray");
-                    document.getElementById("PR-250723-0002").style.display = "none";
+                   // document.getElementById("PR-250723-0002").style.display = "none";
+                  document.getElementById("submitStatQ2").innerHTML = "Selected";
                     document.getElementById("quotationSelectionTable2").style.display = "none";
                 }
                 else {
@@ -132,5 +139,8 @@
                 }
             } 
         </script>
+<footer>
+    <p>&copy; 2023 KrustyKrabs. All rights reserved.</p>
+</footer>
     </body>
 </html>

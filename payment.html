@@ -2,7 +2,9 @@
     <head>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="style2.css">
-
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+        </style>
         <title>Payment</title>
     </head>
     <body>
@@ -14,7 +16,7 @@
             <a href="delivery.html">Delivery Progress</a>
             <a href="report.html">Report</a>
             <a href="notificationshade.html">Notifications</a>
-            <a href="login.html">Logout</a>
+            <a href="index.html">Logout</a>
             <p class="sidebartext">Admin</p>
             <img src="profilepic1.jpg" width="45%" id="imgsidebar">
         </div>
@@ -25,20 +27,20 @@
                 <table>
                     <tr>
                         <td><button onclick="document.getElementById('invoiceupload').click()" class="PaymentButton">Upload Invoice</button>
-                            <input type="file" id="invoiceupload" name="invoice" style="display:none;"></td>
+                            <input type="file" id="invoiceupload" name="invoice" style="display:none;" accept=".doc, .docx"></td>
                         <td><button class="PaymentButton">Download Invoice</button></td>
                     </tr>
                     <tr>
                         <td>
                             <button onclick="document.getElementById('paymentdetailupload').click()" class="PaymentButton">Upload Payment Details</button>
-                            <input type="file" id="paymentdetailupload" name="paymendetail" style="display: none;"></td>
+                            <input type="file" id="paymentdetailupload" name="paymendetail" style="display: none;"  accept=".doc, .docx"></td>
                         <td>
                             <button class="PaymentButton" onclick="GenPayslip()">Generate Payslip</button>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <button id="ViewPayslip" class="PaymentButton" onclick="viewPayslip()">View Payslip Details</button>
+                            <button id="ViewPayslip" onclick="viewPayslip()" >View Payslip Details</button>
                         </td>
                     </tr>
                 </table>
@@ -83,9 +85,12 @@
                 } else
                 {
                     document.getElementById("payslipTable").style.display = "block";
-                    document.getElementById("ViewPayslip").innerHTML = "Unview Payslip Details";
+                    document.getElementById("ViewPayslip").innerHTML = "Hide Payslip Details";
                 }
             }
         </script>
+<footer>
+    <p>&copy; 2023 KrustyKrabs. All rights reserved.</p>
+</footer>
     </body>
 </html>

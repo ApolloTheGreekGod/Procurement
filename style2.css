@@ -1,114 +1,213 @@
+body{ font-family: 'Rubik', sans-serif;
+background: #f7d4a0;
+}
+
 /*====================== Purchase Order ==========================*/
 .POTable {
     margin-top: 5vw;
-    margin-left: 25vw;
+    margin-left: 10vw;
+    margin-right: 5vw;
+    background-color: #f8f8f8; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 15px 15px 11px #ffcb7c;
 }
+
 .POTable table {
     border-collapse: collapse;
+    width: 100%;
 }
-.POTable table th, table td {
-    border: 1px solid;
+
+.POTable table th, .POTable table td {
+    border: 1px solid #ddd; 
+    padding: 12px;
+    text-align: center;
 }
-.POButton {
-    background-color: grey;
-    color: white;
-    height: 3vw;
-    width: 7vw;
-    margin-top: 2vw;
-    font-size: 1vw;
-    border-radius: 25px;
-    border: solid;
+
+.POButton, .POButton2 {
+    background-color: #3498db; /* Blue */
+    color: #fff; /* White text */
+    height: 40px;
+    width: 100px;
+    margin-top: 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
     text-align: center;
-  }
-  .POButton:hover {
-    background-color: #555;
     cursor: pointer;
-  }
-  .POButton2 {
-    background-color: grey;
-    color: white;
-    height: 3vw;
-    width: 7vw;
-    margin-top: 2vw;
-    font-size: 1vw;
-    border-radius: 25px;
-    border: solid;
-    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.POButton:hover, .POButton2:hover {
+    background-color: #2980b9; 
+}
+
+.POButton:hover + .POButton2 {
+    display: inline-block;
+}
+
+.POButton2 {
     display: none;
-  }
-  .POButton2:hover {
-    background-color: #555;
-    cursor: pointer;
-    display: none;
-  }
-  #POTable2 {
+}
+
+#POTable2, #POTable3 {
     margin-top: 6vw;
     display: none;
-  }
-  #POTable3 {
-    margin-top: 6vw;
-    display: none;
-  }
+    background-color: #ecf0f1; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#POTable2:hover, #POTable3:hover {
+    background-color: #dcdde1; 
+}
+
+#PoView1, #PoView2 {
+  background-color: #ff9900; /* Orange */
+    color: #fff; /* White text */
+    height: 40px;
+    font-size: 14px;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 5.5vw;
+}
+
+#PoView1:hover, #PoView2:hover {
+  background-color: #e67300; /* Darker orange on hover */
+}
 
 /*=========================================== Payment =================================*/
 
 .PaymentButton {
-    background-color: grey;
-    color: white;
+background-color: #3498db; /* Blue */
+    color: #fff; /* White text */
     height: 3vw;
     width: 9.5vw;
-    margin-top: 2vw;
-    font-size: 1vw;
-    border-radius: 25px;
-    border: solid;
-    text-align: center;
-  }
-  .PaymentButton:hover {
-    background-color: #555;
-    cursor: pointer;
-  }
-  #ButtonGridPayment {
-    margin-top: 5vw;
-    margin-left: 30vw;
-  }
-  #ButtonGridPayment table td {
+    margin-top: 20px;
+    font-size: 14px;
     border: none;
-  }
-  #payslipTable {
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.PaymentButton:hover {
+     background-color: #2980b9; 
+}
+
+#ButtonGridPayment {
+    margin-top: 5vw;
+    margin-left: 34vw;
+  
+}
+
+#ButtonGridPayment table td {
+    border: none;
+}
+
+#payslipTable {
     margin-top: 2vw;
     margin-left: 20vw;
+    margin-right: 15vw;
     display: none;
-  }
-  #payslipTable table td, table th{
-    border: 1px solid;
-  }
-  #ViewPayslip {
+    background-color: #f8f8f8;
+    padding: 20px;
+  padding-left: 4vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#payslipTable table td,
+#payslipTable table th {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin-bottom: 50px;
+}
+
+#ViewPayslip {
     display: none;
-  }
+  background-color: #ff9900; /* Orange */
+    color: #fff; /* White text */
+    height: 2.5vw;
+    font-size: 14px;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 9.5vw;
+
+}
+#ViewPayslip:hover {
+     background-color: #e67300;
+}
 
   /*========================== Delivery =========================*/
 
   #deliveryTable {
-    margin-top: 5vw;
-    margin-left: 25vw;
+  margin-top: 5vw;
+    margin-left: 10vw;
+    margin-right: 20vw;
+    background-color: #f8f8f8; /* Light gray background */
+    padding: 20px;
+    padding-left: 6vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 15px 15px 11px #ffcb7c;
+    
   }
   
   #deliveryTable table th, table td{
-   border: 1px solid;
+   border: 1px solid #ddd;
+   padding: 12px;
+   text-align: center;
+ 
   }
 
   .DelButtonSubmit {
-    background-color: grey;
-    color: white;
-    height: 3vw;
-    width: 6vw;
-    margin-top: 2vw;
-    font-size: 1vw;
-    border-radius: 25px;
-    border: solid;
+    background-color: #3498db; /* Blue */
+    color: #fff; /* White text */
+    height: 40px;
+    width: 130px;
+    margin-top: 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
     text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   .DelButtonSubmit:hover {
-    background-color: #555;
+      background-color: #2980b9;
     cursor: pointer;
   }
+/*========================= summary report ========================*/
+
+.printPageButton {
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  width: 7vw;
+  height: 4vw;
+  margin-left: 25vw;
+  cursor: pointer;
+}
+
+footer {
+    margin-top: 1px;
+    text-align: center;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 0.01px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}

@@ -1,88 +1,127 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    background: #f7d4a0;
+    font-family: 'Rubik', sans-serif;
+
 }
+
+
 
 /*---------------------- Login -----------------------*/
 
 .loginbox {
     text-align: center;
     background-color:white;
-    margin-top:13%;
+    margin-top:5%;
     margin-left: 35vw;
     justify-content: center;
     align-items: center;
     width:28vw;
-    height:20vw;
+    height:30vw;
     display: absolute;
     border-width:5px;
     border-radius: 20px;
-    border:solid;
-    border-color:black;
+  box-shadow: 15px 15px 11px #ffcb7c;
+}
+
+
+.logoHeader{
+  margin-top:none;
 }
 .inputbox input {
     width:25vw;
-    height:2.5vw;
+    height:2vw;
     margin-bottom: 5px;
-    border:1px solid black;
-    width: 90%;
+    border: 1.3px solid #ffa500;
+    width: 70%;
     justify-content: center;
     align-items: center;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-clip: padding-box;
+    border-radius: 10px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
 .loginText {
     text-align: center;
-    margin-top: 10%;
+    margin-top: 2%;
+    color: black;
 }
+
+/* Super Cool Login Button */
 .loginbutton {
-    margin-top: 1vw;
-    width: 60%;
-    height: 2vw;
-    background-color: grey;
+    margin-top: 2.5vw;
+    width: 50%;
+    height: 2.5vw;
+    background-color: 	#ffb366; /* Orange background */
+    color: #ecf0f1; /* Light text color */
+    font-size: 1.2vw; /* Adjust font size */
     border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px #ffe6cc;
+    transition: background-color 0.3s, transform 0.2s ease-out;
+
 }
+
+/* Hover Effect */
 .loginbutton:hover {
-    background-color: rgb(179, 179, 179);
+    background-color: #ffcc66; /* Lighter orange on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
     cursor: pointer;
+}
+
+/* Active State Effect */
+.loginbutton:active {
+    transform: scale(0.95); /* Slightly scale down when clicked */
 }
 
 /*------------------------------ Sidebar -----------------------------*/
 
 .sidebar {
-    margin: 0;
-    padding: 0;
-    width: 10vw;
-    background-color: #f1f1f1;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 15vw;
     height: 100%;
+    background-color: #2c3e50;
     overflow: auto;
-  }
-  .sidebar a {
+    transition: width 0.5s;
+    z-index: 1;
+}
+
+.sidebar a {
     display: block;
-    color: black;
-    padding: 16px;
+    padding: 1.5rem;
+    color: #ecf0f1;
     text-decoration: none;
-  }
-  
-  /* Active/current link */
-  .sidebar a.active {
-    background-color: #818181;
-    color: white;
-  }
-  
-  /* Links on mouse-over */
-  .sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
+    transition: background-color 0.3s, color 0.3s;
+}
 
-  .sidebartext {
-    margin-top: 16vw;
-    margin-left: 3vw;
-    font-size: 22px;
-  }
+.sidebar a.active {
+    background-color: #3498db;
+    color: #ffffff;
+}
 
-  #imgsidebar {
-    margin-left: 2.5vw;
-  }
+.sidebar a:hover:not(.active) {
+    background-color: #2980b9;
+    color: #ffffff;
+}
+
+.sidebartext {
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    color: #ecf0f1;
+}
+
+#imgsidebar {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    max-width: 80%;
+    border-radius: 50%;
+}
 
   /*------------------------------------------ Content ------------------------------------------*/
 
@@ -94,115 +133,208 @@ body {
 
 /*========================= Purchase Request ========================*/
 
-  .submitButtonPR {
+div.content center h1 {
+
+  font-size: 3em;
+  font-family: 'Your Chosen Font', sans-serif;
+  color: #2c3e50; /* Darker text color for elegance */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px; /* Increased margin for better spacing */
+  font-weight: 700; /* Adjusted font weight for emphasis */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2; /* Adjusted line height for better readability */
+  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+
+div.content center h1:hover {
+  color: #e74c3c; /* Change text color on hover */
+}
+  
+
+
+.submitButtonPR {
     margin-left: 8vw;
     margin-top: 3vw;
-    background-color: grey;
+    background-color: #3498db; /* Professional blue background */
+    color: #ecf0f1; /* Light text color */
     width: 12.5vw;
     height: 3vw;
-    padding-top: 1vw;
+    padding: 1.25vw;
     text-align: center;
     justify-content: center;
     align-items: center;
-    border-radius: 25px;
-    font-size: 1vw;
-  }
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2vw; /* Slightly larger font size for readability */
+    transition: background-color 0.3s, transform 0.2s ease-out;
+    
+}
 
-  .submitButtonPR:hover {
-    background-color: #555;
+/* Hover Effect */
+.submitButtonPR:hover {
+    background-color: #2980b9; /* Slightly darker blue on hover */
     cursor: pointer;
-  }
-  .PRTableContainer {
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Active State Effect */
+.submitButtonPR:active {
+    transform: scale(0.95); /* Slightly scale down when clicked */
+}
+
+/* Optional: Add a subtle shadow for depth */
+.submitButtonPR {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+  /* Elegant table container styling */
+.PRTableContainer {
     margin-top: 5vw;
-    margin-left: 25vw;
-  }
-  .PRTableContainer th,td {
+    margin-left: 10vw;
+    background-color: #f8f8f8; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 5vw;
+    box-shadow: 15px 15px 11px #ffcb7c;
+}
+
+/* Stylish table cell and header styling */
+.PRTableContainer th,
+.PRTableContainer td {
     padding: 20px;
     text-align: left;
-    border: 1px black solid;
-   
-  }
-  .PRTableContainer table {
+    border: 1px solid #333; /* Dark border */
+}
+
+.PRTableContainer table {
     border-collapse: collapse;
-  }
-  .PRTableButton {
-    background-color: grey;
-    color: white;
+    width: 100%;
+}
+
+/* Elegant button styles */
+
+
+.PRTableButton:hover, .PRApprButton:hover {
+    background-color: #e67300; /* Darker orange on hover */
+}
+
+/* Additional refinements for PRTableButton */
+.PRTableButton {
+    width: 5.5vw;
+  background-color: #ff9900; /* Orange */
+    color: #fff; /* White text */
     height: 3vw;
-    width: 5vw;
-    border-radius: 25px;
-    border: solid;
-    text-align: center;
     font-size: 1vw;
-  }
-  .PRTableButton:hover {
-    background-color: #555;
+    border: none;
+    border-radius: 25px;
+    text-align: center;
     cursor: pointer;
-  }
-  .PRApprButton {
-    background-color: grey;
-    color: white;
-    height: 3vw;
+    transition: background-color 0.3s ease;
+}
+
+/* Improved styling for PRApprButton */
+.PRApprButton {
     width: 6.5vw;
     margin-top: 2vw;
+   background-color: #3498db; /* Blue */
+    color: #fff; /* White text */
+    height: 3vw;
+    margin-top: 20px;
     font-size: 1vw;
-    border-radius: 25px;
-    border: solid;
+    border: none;
+    border-radius: 20px;
     text-align: center;
-  }
-  .PRApprButton:hover {
-    background-color: #555;
     cursor: pointer;
-  }
+    transition: background-color 0.3s ease;
+}
+
+.PRApprButton:hover {
+     background-color: #2980b9; /* Dark gray on hover */
+}
+
 
   /*======================= NPR ==========================*/
 
   .NPRContainer {
-    margin-top: 5vw;
-    margin-left: 25vw;
+      margin-top: 5vw;
+    margin-left: 20vw;
+   
+    background-color: #f8f8f8; /* Light gray background */
+    padding: 20px;
+     padding-left: 8vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20vw;
+    box-shadow: 15px 15px 11px #ffcb7c;
+    align-items: center;
   }
 
   .NPRContainer form table td, table th {
     border: none;
   }
+.NPRentry {
+  height: 2vw;
+  width: 11vw;
+  padding: 10px;
+}
 
   /*====================== Quotation ===========================*/
 
   .quotationTable {
     margin-top: 5vw;
     margin-left: 25vw;
+    margin-right: 20vw;
+    background-color: #f8f8f8; /* Light gray background */
+    padding: 20px;
+    padding-left: 2vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 15px 15px 11px #ffcb7c;
   }
   .quotationTable table {
    border-collapse: collapse;
   }
-.quotationButton {
-  background-color: grey;
-  color: white;
-  height: 3vw;
-  width: 13.5vw;
-  margin-top: 2vw;
-  font-size: 1vw;
-  border-radius: 25px;
-  border: solid;
-  text-align: center;
+.quotationTable table th, .quotationTable table td {
+    border: 1px solid #ddd; 
+    padding: 12px;
+    text-align: center;
 }
+.quotationButton {
+    background-color: #3498db; /* Blue */
+    color: #fff; /* White text */
+    height: 3vw;
+    width: 13.5vw;
+    margin-top: 20px;
+    font-size: 13px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+ 
 .quotationButton:hover {
-  background-color: #555;
+background-color: #2980b9; 
   cursor: pointer;
 }
 .quotationButton2 {
-  background-color: grey;
-  color: white;
-  height: 3vw;
+ background-color: #3498db; /* Blue */
+    color: #fff; /* White text */
+   height: 3vw;
   width: 9.5vw;
-  margin-top: 2vw;
-  font-size: 1vw;
-  border-radius: 25px;
-  border: solid;
-  text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 .quotationButton2:hover {
-  background-color: #555;
+  background-color: #2980b9; 
   cursor: pointer;
 }
 #quotationButton2 {
@@ -213,9 +345,13 @@ body {
 }
 .quotationSelectionTable {
   margin-top: 5vw;
-  margin-left: 25vw;
-  display: none;
-}
+    margin-left: 25vw;
+    margin-right: 20vw;
+    background-color: #f8f8f8; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none; }
 .quotationSelectionTable table {
   border-collapse: collapse;
 }
@@ -224,13 +360,37 @@ body {
   border:1px solid;
 
 }
+
 .selectQuote {
   transform: scale(1.5);
   cursor: pointer;
 }
 .submitButtonQ {
-  margin-top: 2vw;
-  width: 5vw;
-  height: 2vw;
+ background-color: #3498db; /* Blue */
+    color: #fff; /* White text */
+   height: 3vw;
+  width: 9.5vw;
+    margin-top: 20px;
+    font-size: 12px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submitButtonQ:hover {
+background-color: #2980b9; 
   cursor: pointer;
+}
+
+footer {
+    margin-top: 1px;
+    text-align: center;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 0.01px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  height: 40px;
 }

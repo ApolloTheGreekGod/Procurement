@@ -1,7 +1,9 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+        </style>
         <title>Purchase Request</title>
     </head>
     <body>
@@ -13,13 +15,13 @@
             <a href="delivery.html">Delivery Progress</a>
             <a href="report.html">Report</a>
             <a href="notificationshade.html">Notifications</a>
-            <a href="login.html">Logout</a>
+            <a href="index.html">Logout</a>
             <p class="sidebartext">Admin</p>
             <img src="profilepic1.jpg" width="45%" id="imgsidebar">
         </div>
         <div class="content">
             <center><h1>New Purchase Request</h1></center>
-            <div class="submitButtonPR">
+            <div class="submitButtonPR" style="width: 6vw; height: 1.5vw;">
                 <a style="text-decoration: none; color: white;" href="purchaserequest.html"> Go Back </a>
             </div>
             <div class="NPRContainer">
@@ -31,12 +33,12 @@
                         <th>Quantity</th>
                     </tr>
                     <tr>
-                        <td><input type="text" name="productid" required pattern=".{10}" title="Please make sure the ID is 14 characters long"></td>
-                        <td><input type="text" name="productname" required></td>
-                        <td><input type="number" name="quantity" min="1" required></td>
+                        <td><input type="text" name="productid" required pattern=".{10}" title="Please make sure the ID is 14 characters long" class="NPRentry"></td>
+                        <td><input type="text" name="productname" required class="NPRentry"></td>
+                        <td><input type="number" name="quantity" min="1" required class="NPRentry"></td>
                     </tr>
                 </table>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" class="PRApprButton">
             </form>
             </div>
         </div>
@@ -50,5 +52,11 @@ alert("Purchase Request Submitted!");
                 }
             }
         </script>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+        </style>
+<footer>
+    <p>&copy; 2023 KrustyKrabs. All rights reserved.</p>
+</footer>
     </body>
 </html>
