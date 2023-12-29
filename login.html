@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="loginbox">
+            <form>
+                <h1 class="loginText">Login</h1>
+                <div class="inputbox">
+                    <input type="text" placeholder="Username" required id="name" />
+                </div>
+                <div class="inputbox">
+                    <input type="password" placeholder="Password" required id="pass" />
+                </div>
+                
+                <button type="button" class="loginbutton" id="loginButton">
+                    Submit
+                  </button>
+            </form>
+        </div>
+        <script>
+            document.getElementById("loginButton").onclick=function(){ 
+
+                let username = "admin";
+                let password = "123";
+
+                var userscan = document.getElementById("name").value;
+                var  passscan= document.getElementById("pass").value;
+
+                if (userscan == username && passscan == password){
+                    window.location.href = "purchaserequest.html";
+                    console.log("itworks")
+                } else if (userscan == "" || passscan == "") {
+                    alert("Please fill in all the boxes!")
+                }
+                else {
+                    alert("Username or password is wrong!")
+                }
+            }
+
+        </script>
+    </body>
+</html>

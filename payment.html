@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style2.css">
+
+        <title>Payment</title>
+    </head>
+    <body>
+        <div class="sidebar">
+            <a  href="purchaserequest.html">Purchase Request</a>
+            <a href="purchaseorder.html">Purchase Order</a>
+            <a href="quotation.html">Quotation</a>
+            <a class="active" href="payment.html">Payment</a>
+            <a href="delivery.html">Delivery Progress</a>
+            <a href="report.html">Report</a>
+            <a href="notificationshade.html">Notifications</a>
+            <a href="login.html">Logout</a>
+            <p class="sidebartext">Admin</p>
+            <img src="profilepic1.jpg" width="45%" id="imgsidebar">
+        </div>
+        <div class="content">
+            <center><h1>Payment</h1></center>
+            
+            <div id="ButtonGridPayment">
+                <table>
+                    <tr>
+                        <td><button onclick="document.getElementById('invoiceupload').click()" class="PaymentButton">Upload Invoice</button>
+                            <input type="file" id="invoiceupload" name="invoice" style="display:none;"></td>
+                        <td><button class="PaymentButton">Download Invoice</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="document.getElementById('paymentdetailupload').click()" class="PaymentButton">Upload Payment Details</button>
+                            <input type="file" id="paymentdetailupload" name="paymendetail" style="display: none;"></td>
+                        <td>
+                            <button class="PaymentButton" onclick="GenPayslip()">Generate Payslip</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id="ViewPayslip" class="PaymentButton" onclick="viewPayslip()">View Payslip Details</button>
+                        </td>
+                    </tr>
+                </table>
+                
+                
+            </div>
+            <table id="payslipTable" style="border-collapse: collapse;">
+                <tr>
+                    <th>Payslip No.</th>
+                    <th>Order ID</th>
+                    <th>Invoice No.</th>
+                    <th>Staff ID</th>
+                    <th>Amount Paid</th>
+                    <th>Payment Date</th>
+                </tr>
+                <tr>
+                    <td>PAY-030823-0001</td>
+                    <td>PO-010823-0001</td>
+                    <td>INV-020823-0001</td>
+                    <td>FNFNM-0001</td>
+                    <td>4240</td>
+                    <td>03/08/2023</td>
+                </tr>
+                <tr>
+                    <td>PAY-030823-0002</td>
+                    <td>PO-010823-0002</td>
+                    <td>INV-020823-0002</td>
+                    <td>FNFNM-0001</td>
+                    <td>390</td>
+                    <td>03/08/2023</td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            function GenPayslip() {
+                document.getElementById("ViewPayslip").style.display = "block";
+            }
+            function viewPayslip() {
+                if (document.getElementById("payslipTable").style.display == "block") {
+                    document.getElementById("payslipTable").style.display = "none";
+                    document.getElementById("ViewPayslip").innerHTML = "View Payslip Details";
+                } else
+                {
+                    document.getElementById("payslipTable").style.display = "block";
+                    document.getElementById("ViewPayslip").innerHTML = "Unview Payslip Details";
+                }
+            }
+        </script>
+    </body>
+</html>

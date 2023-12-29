@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style2.css">
+
+        <title>Purchase Order</title>
+    </head>
+    <body>
+        <div class="sidebar">
+            <a href="purchaserequest.html">Purchase Request</a>
+            <a class="active" href="purchaseorder.html">Purchase Order</a>
+            <a href="quotation.html">Quotation</a>
+            <a href="payment.html">Payment</a>
+            <a href="delivery.html">Delivery Progress</a>
+            <a href="report.html">Report</a>
+            <a href="notificationshade.html">Notifications</a>
+            <a href="login.html">Logout</a>
+            <p class="sidebartext">Admin</p>
+            <img src="profilepic1.jpg" width="45%" id="imgsidebar">
+        </div>
+        <div class="content">
+            <center><h1>Purchase Order</h1></center>
+            <div class="POTable">
+                <table>
+                    <tr>
+                        <th>Purchase Request ID</th>
+                        <th>Quotation ID</th>
+                        <th>Approval Status</th>
+                    </tr>
+                    <tr>
+                        <td>PR-250723-0001</td>
+                        <td>QUO-300723-0001</td>
+                        <td id="ApprovalStat1">Pending</td>
+                        <td style="border: none;"><button class="POButton" id="PoGen1" onclick="PoGenerate1()">Generate</button></td>
+                        <td style="border: none;"><button class="POButton2" id="PoView1" onclick="POTable2()">View</button></td>
+                        <td style="border: none;"><button class="POButton2" id="PoApprove1" onclick="Approve()">Approve</button></td>
+                    </tr>
+                    <tr>
+                        <td>PR-250723-0002</td>
+                        <td>QUO-300723-0003</td>
+                        <td id="ApprovalStat2">Pending</td>
+                        <td style="border: none;"><button class="POButton" id="PoGen2" onclick="PoGenerate2()">Generate</button></td>
+                        <td style="border: none;"><button class="POButton2" id="PoView2" onclick="POTable3()">View</button></td>
+                        <td style="border: none;"><button class="POButton2" id="PoApprove2" onclick="Approve2()">Approve</button></td>
+                    </tr>
+                </table>
+                <div class="POTable2" id="POTable2">
+                    <table>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Supplier ID</th>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Total Price</th>
+                        </tr>
+                        <tr>
+                            <td>PO-010823-0001</td>
+                            <td>SUP001</td>
+                            <td>Raw Sea Crab</td>
+                            <td>200</td>
+                            <td>21.20</td>
+                            <td>4240</td>
+                        </tr>
+                        <tr>
+                           <td style="border: none;"><button class="POButton" id="POSend1" onclick="POSend1()">Send</button></td> 
+                        </tr>
+                       
+                    </table>
+                </div> 
+                <div class="POTable3" id="POTable3">
+                    <table>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Supplier ID</th>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Total Price</th>
+                        </tr>
+                        <tr>
+                            <td>PO-010823-0002</td>
+                            <td>SUP012</td>
+                            <td>Mayonnaise</td>
+                            <td>100</td>
+                            <td>3.90</td>
+                            <td>390</td>
+                        </tr>
+                        <tr>
+                            <td style="border: none;"><button class="POButton" id="POSend2" onclick="POSend2()">Send</button></td> 
+                         </tr>
+                    </table>
+                </div> 
+            </div>
+        </div>
+        <script>
+            function PoGenerate1(){
+                document.getElementById("PoView1").style.display = "block";
+                document.getElementById("PoApprove1").style.display = "block";
+                
+            }
+            function PoGenerate2(){
+                document.getElementById("PoView2").style.display = "block";
+                document.getElementById("PoApprove2").style.display = "block";
+                
+            }
+            function POTable2() {
+                if ( document.getElementById("POTable2").style.display == "block") {
+                    document.getElementById("POTable2").style.display = "none";
+                    document.getElementById("PoView1").innerHTML = "View";
+                } else {
+                    document.getElementById("POTable2").style.display = "block";
+                    document.getElementById("PoView1").innerHTML = "Unview";
+                }
+               
+            }
+            function POTable3() {
+                if ( document.getElementById("POTable3").style.display == "block") {
+                    document.getElementById("POTable3").style.display = "none";
+                    document.getElementById("PoView2").innerHTML = "View";
+                } else {
+                    document.getElementById("POTable3").style.display = "block";
+                    document.getElementById("PoView2").innerHTML = "Unview";
+                }
+            }
+            function Approve() {
+               // document.getElementById("POTable2").style.display = "none";
+                document.getElementById("PoApprove1").style.display = "none";
+                //document.getElementById("PoView1").innerHTML = "View";
+                document.getElementById("ApprovalStat1").innerHTML = "Approved";
+                alert("PR-250723-0001 has been Approved!");
+
+            }
+            function Approve2() {
+               // document.getElementById("POTable3").style.display = "none";
+                document.getElementById("PoApprove2").style.display = "none";
+               // document.getElementById("PoView2").innerHTML = "View";
+                document.getElementById("ApprovalStat2").innerHTML = "Approved";
+                alert("PR-250723-0002 has been Approved!");
+
+            }
+            function POSend1() {
+                if (document.getElementById("ApprovalStat1").innerHTML == "Approved")
+                {
+                    alert("Purchase Order has been sent to the supplier!");
+                    document.getElementById("POTable2").style.display = "none";
+                    document.getElementById("PoView1").innerHTML = "View";
+                } else {
+                    alert("Please wait for approval!");
+                }
+                
+            }
+            function POSend2() {
+                if (document.getElementById("ApprovalStat2").innerHTML == "Approved")
+                {
+                    alert("Purchase Order has been sent to the supplier!");
+                    document.getElementById("POTable3").style.display = "none";
+                    document.getElementById("PoView2").innerHTML = "View";
+                }
+                else {
+                    alert("Please wait for approval!");
+                }
+            }
+        </script>
+        
+    </body>
+</html>

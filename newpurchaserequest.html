@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+
+        <title>Purchase Request</title>
+    </head>
+    <body>
+        <div class="sidebar">
+            <a class="active" href="purchaserequest.html">Purchase Request</a>
+            <a href="purchaseorder.html">Purchase Order</a>
+            <a href="quotation.html">Quotation</a>
+            <a href="payment.html">Payment</a>
+            <a href="delivery.html">Delivery Progress</a>
+            <a href="report.html">Report</a>
+            <a href="notificationshade.html">Notifications</a>
+            <a href="login.html">Logout</a>
+            <p class="sidebartext">Admin</p>
+            <img src="profilepic1.jpg" width="45%" id="imgsidebar">
+        </div>
+        <div class="content">
+            <center><h1>New Purchase Request</h1></center>
+            <div class="submitButtonPR">
+                <a style="text-decoration: none; color: white;" href="purchaserequest.html"> Go Back </a>
+            </div>
+            <div class="NPRContainer">
+                <form name="CreatePurchaseRequest" onsubmit="validateForm()">
+                <table>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="productid" required pattern=".{10}" title="Please make sure the ID is 14 characters long"></td>
+                        <td><input type="text" name="productname" required></td>
+                        <td><input type="number" name="quantity" min="1" required></td>
+                    </tr>
+                </table>
+                <input type="submit" value="Submit">
+            </form>
+            </div>
+        </div>
+        <script>
+            function validateForm() {
+                let quantity = document.forms["CreatePurchaseRequest"]["quantity"].value;
+console.log("works");
+alert("Purchase Request Submitted!");
+                if (ParseInt(quantity) >= 0) {
+                    
+                }
+            }
+        </script>
+    </body>
+</html>

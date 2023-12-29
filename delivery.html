@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style2.css">
+
+        <title>Delivery Progress</title>
+    </head>
+    <body>
+        <div class="sidebar">
+            <a  href="purchaserequest.html">Purchase Request</a>
+            <a href="purchaseorder.html">Purchase Order</a>
+            <a href="quotation.html">Quotation</a>
+            <a  href="payment.html">Payment</a>
+            <a class="active" href="delivery.html">Delivery Progress</a>
+            <a href="report.html">Report</a>
+            <a href="notificationshade.html">Notifications</a>
+            <a href="login.html">Logout</a>
+            <p class="sidebartext">Admin</p>
+            <img src="profilepic1.jpg" width="45%" id="imgsidebar">
+        </div>
+        <div class="content">
+            <center><h1>Delivery Progress</h1></center>
+            <div id="deliveryTable">
+                <table style="border-collapse: collapse;">
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Staff ID</th>
+                        <th>Delivery Status</th>
+                        <th>Item Condition</th>
+                        <th>Date Received</th>
+                    </tr>
+                    <tr>
+                        <td>PO-020823-0001</td>
+                        <td id="staffIDDel">N/A</td>
+                        <td>
+                            <select id="delStatus1">
+                                <option value="pending" selected>Pending</option>
+                                <option value="missing">Missing</option>
+                                <option value="arrived">Arrived</option>
+                            </select>
+                        </td>
+                        <td>
+                            <textarea id="deliveryCond1" class="deliveryCond"></textarea>
+                        </td>
+                        <td id="dateRc">
+                            N/A
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PO-020823-0002</td>
+                        <td id="staffIDDel2">N/A</td>
+                        <td>
+                            <select id="delStatus2">
+                                <option value="pending" selected>Pending</option>
+                                <option value="missing">Missing</option>
+                                <option value="arrived">Arrived</option>
+                            </select>
+                        </td>
+                        <td>
+                            <textarea id="deliveryCond2" class="deliveryCond"></textarea>
+                        </td>
+                        <td id="dateRc2">
+                            N/A
+                        </td>
+                    </tr>
+                </table>
+                <button onclick="getOption()" class="DelButtonSubmit">Update</button>
+            </div>
+        </div>
+        <script>
+            function getOption() {
+            selectElement = document.querySelector('#delStatus1');
+            output = selectElement.options[selectElement.selectedIndex].value;
+            if (output != "pending") {
+document.getElementById("staffIDDel").innerHTML = "Admin";
+            } 
+            if ( output == "arrived") {
+                document.getElementById("dateRc").innerHTML = today;
+                console.log("works");
+            }
+            //------------------------------------------------------
+            selectElement2 = document.querySelector('#delStatus2');
+            output2 = selectElement2.options[selectElement2.selectedIndex].value;
+            if (output2 != "pending") {
+document.getElementById("staffIDDel2").innerHTML = "Admin";
+            } 
+            if ( output2 == "arrived") {
+                document.getElementById("dateRc2").innerHTML = today;
+                console.log("works");
+            }
+            alert("Delivery Progress has been updated!");
+                }
+          
+var today = new Date();
+
+// Get the day of the month
+var dd = today.getDate();
+
+// Get the month (adding 1 because months are zero-based)
+var mm = today.getMonth() + 1;
+
+// Get the year
+var yyyy = today.getFullYear();
+
+// Add leading zero if the day is less than 10
+if (dd < 10) {
+    dd = '0' + dd;
+} 
+
+// Add leading zero if the month is less than 10
+if (mm < 10) {
+    mm = '0' + mm;
+}
+today = dd + '/' + mm + '/' + yyyy;
+        </script>
+    </body>
+</html>

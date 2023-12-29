@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+
+        <title>Purchase Request</title>
+    </head>
+    <body>
+        <div class="sidebar">
+            <a class="active" href="purchaserequest.html">Purchase Request</a>
+            <a href="purchaseorder.html">Purchase Order</a>
+            <a href="quotation.html">Quotation</a>
+            <a href="payment.html">Payment</a>
+            <a href="delivery.html">Delivery Progress</a>
+            <a href="report.html">Report</a>
+            <a href="notificationshade.html">Notifications</a>
+            <a href="login.html">Logout</a>
+            <p class="sidebartext">Admin</p>
+            <img src="profilepic1.jpg" width="45%" id="imgsidebar">
+        </div>
+        <div class="content">
+            <center><h1>Purchase Request</h1></center>
+            <div class="submitButtonPR" >
+                <a style="text-decoration: none; color: white;" href="newpurchaserequest.html"> Submit New Purchase Request </a>
+            </div>
+            <div class="PRTableContainer">
+                <table>
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Product ID</th>
+                        <th>Request Date</th>
+                        <th>Approval Status</th>
+                    </tr>
+                    <tr>
+                        <td>PR-250723-0001</td>
+                        <td>PROD-FR0012</td>
+                        <td>25/7/2023</td>
+                        <td id="apprStatus">Pending</td>
+                        <td style="border: none;"><button class="PRTableButton" id="viewButton">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>PR-250723-0002</td>
+                        <td>PROD-FS0023</td>
+                        <td>25/7/2023</td>
+                        <td id="apprStatus2">Pending</td>
+                        <td style="border: none;"><button class="PRTableButton" id="viewButton2">View</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="PRTableContainer" style="display:none;" id="PRTable2">
+                <table>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Staff ID</th>
+                    </tr>
+                    <tr>
+                        <td>PROD-FR0012</td>
+                        <td>Raw Sea Crab</td>
+                        <td>200</td>
+                        <td>IVIMG-0002</td>
+                    </tr>
+                </table>
+                <button class="PRApprButton" id="PRApprButtonID">Approve</button>
+            </div>
+            <div class="PRTableContainer" style="display:none;" id="PRTable3">
+                <table>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Quantity</th>
+                        <th>Staff ID</th>
+                    </tr>
+                    <tr>
+                        <td>PROD-FS0023</td>
+                        <td>Mayonnaise</td>
+                        <td>100</td>
+                        <td>IVIMG-0013</td>
+                    </tr>
+                </table>
+                <button class="PRApprButton" id="PRApprButtonID2">Approve</button>
+            </div>
+        </div>
+        <script>
+            document.getElementById("viewButton").onclick = function() {
+                let aprvStatus =  document.getElementById("apprStatus").innerHTML;
+                let prTableDisplay = document.getElementById("PRTable2").style.display;
+                console.log("yes");
+                
+                if (prTableDisplay == "block") {
+                    document.getElementById("PRTable2").style.display = "none";
+                    document.getElementById("viewButton").innerHTML = "View";
+                }
+                else {
+                    document.getElementById("PRTable2").style.display = "block";
+                    document.getElementById("viewButton").innerHTML = "Unview";
+                if (aprvStatus == "Approved") {
+                    document.getElementById("PRApprButtonID").style.display = "none";
+                }
+                }
+                
+            }
+            document.getElementById("PRApprButtonID").onclick = function() {
+                alert("Purchase Request PR-01FRM14-250723 has been approved!");
+                document.getElementById("apprStatus").innerHTML = "Approved";
+                document.getElementById("PRTable2").style.display = "none";
+                document.getElementById("viewButton").innerHTML = "View";
+            }
+            document.getElementById("viewButton2").onclick = function() {
+                let aprvStatus =  document.getElementById("apprStatus2").innerHTML;
+                let prTableDisplay = document.getElementById("PRTable3").style.display;
+                console.log("yes");
+                
+                if (prTableDisplay == "block") {
+                    document.getElementById("PRTable3").style.display = "none";
+                    document.getElementById("viewButton2").innerHTML = "View";
+                }
+                else {
+                    document.getElementById("PRTable3").style.display = "block";
+                    document.getElementById("viewButton2").innerHTML = "Unview";
+                if (aprvStatus == "Approved") {
+                    document.getElementById("PRApprButtonID2").style.display = "none";
+                }
+                }
+                
+            }
+            document.getElementById("PRApprButtonID2").onclick = function() {
+                alert("Purchase Request PR-01FRM14-250723 has been approved!");
+                document.getElementById("apprStatus2").innerHTML = "Approved";
+                document.getElementById("PRTable3").style.display = "none";
+                document.getElementById("viewButton2").innerHTML = "View";
+            }
+        </script>
+    </body>
+</html>

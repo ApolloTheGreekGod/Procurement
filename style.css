@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*---------------------- Login -----------------------*/
+
+.loginbox {
+    text-align: center;
+    background-color:white;
+    margin-top:13%;
+    margin-left: 35vw;
+    justify-content: center;
+    align-items: center;
+    width:28vw;
+    height:20vw;
+    display: absolute;
+    border-width:5px;
+    border-radius: 20px;
+    border:solid;
+    border-color:black;
+}
+.inputbox input {
+    width:25vw;
+    height:2.5vw;
+    margin-bottom: 5px;
+    border:1px solid black;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+.loginText {
+    text-align: center;
+    margin-top: 10%;
+}
+.loginbutton {
+    margin-top: 1vw;
+    width: 60%;
+    height: 2vw;
+    background-color: grey;
+    border: none;
+}
+.loginbutton:hover {
+    background-color: rgb(179, 179, 179);
+    cursor: pointer;
+}
+
+/*------------------------------ Sidebar -----------------------------*/
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 10vw;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #818181;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+
+  .sidebartext {
+    margin-top: 16vw;
+    margin-left: 3vw;
+    font-size: 22px;
+  }
+
+  #imgsidebar {
+    margin-left: 2.5vw;
+  }
+
+  /*------------------------------------------ Content ------------------------------------------*/
+
+  div.content {
+    margin-left: 10vw;
+    padding-top: 3vw;
+    height: auto;
+  }    
+
+/*========================= Purchase Request ========================*/
+
+  .submitButtonPR {
+    margin-left: 8vw;
+    margin-top: 3vw;
+    background-color: grey;
+    width: 12.5vw;
+    height: 3vw;
+    padding-top: 1vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    font-size: 1vw;
+  }
+
+  .submitButtonPR:hover {
+    background-color: #555;
+    cursor: pointer;
+  }
+  .PRTableContainer {
+    margin-top: 5vw;
+    margin-left: 25vw;
+  }
+  .PRTableContainer th,td {
+    padding: 20px;
+    text-align: left;
+    border: 1px black solid;
+   
+  }
+  .PRTableContainer table {
+    border-collapse: collapse;
+  }
+  .PRTableButton {
+    background-color: grey;
+    color: white;
+    height: 3vw;
+    width: 5vw;
+    border-radius: 25px;
+    border: solid;
+    text-align: center;
+    font-size: 1vw;
+  }
+  .PRTableButton:hover {
+    background-color: #555;
+    cursor: pointer;
+  }
+  .PRApprButton {
+    background-color: grey;
+    color: white;
+    height: 3vw;
+    width: 6.5vw;
+    margin-top: 2vw;
+    font-size: 1vw;
+    border-radius: 25px;
+    border: solid;
+    text-align: center;
+  }
+  .PRApprButton:hover {
+    background-color: #555;
+    cursor: pointer;
+  }
+
+  /*======================= NPR ==========================*/
+
+  .NPRContainer {
+    margin-top: 5vw;
+    margin-left: 25vw;
+  }
+
+  .NPRContainer form table td, table th {
+    border: none;
+  }
+
+  /*====================== Quotation ===========================*/
+
+  .quotationTable {
+    margin-top: 5vw;
+    margin-left: 25vw;
+  }
+  .quotationTable table {
+   border-collapse: collapse;
+  }
+.quotationButton {
+  background-color: grey;
+  color: white;
+  height: 3vw;
+  width: 13.5vw;
+  margin-top: 2vw;
+  font-size: 1vw;
+  border-radius: 25px;
+  border: solid;
+  text-align: center;
+}
+.quotationButton:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+.quotationButton2 {
+  background-color: grey;
+  color: white;
+  height: 3vw;
+  width: 9.5vw;
+  margin-top: 2vw;
+  font-size: 1vw;
+  border-radius: 25px;
+  border: solid;
+  text-align: center;
+}
+.quotationButton2:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+#quotationButton2 {
+  display: none;
+}
+#quotationButton3 {
+  display: none;
+}
+.quotationSelectionTable {
+  margin-top: 5vw;
+  margin-left: 25vw;
+  display: none;
+}
+.quotationSelectionTable table {
+  border-collapse: collapse;
+}
+.quotationSelectionTable table td,th {
+  padding: 10px 10px 10px 10px;
+  border:1px solid;
+
+}
+.selectQuote {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+.submitButtonQ {
+  margin-top: 2vw;
+  width: 5vw;
+  height: 2vw;
+  cursor: pointer;
+}
